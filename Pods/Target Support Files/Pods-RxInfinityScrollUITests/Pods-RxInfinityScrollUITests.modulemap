@@ -1,0 +1,6 @@
+framework module Pods_RxInfinityScrollUITests {
+  umbrella header "Pods-RxInfinityScrollUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

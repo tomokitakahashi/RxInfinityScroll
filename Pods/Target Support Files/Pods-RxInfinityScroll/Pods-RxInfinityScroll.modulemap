@@ -1,0 +1,6 @@
+framework module Pods_RxInfinityScroll {
+  umbrella header "Pods-RxInfinityScroll-umbrella.h"
+
+  export *
+  module * { export * }
+}
