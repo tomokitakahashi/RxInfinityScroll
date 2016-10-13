@@ -17,6 +17,9 @@
 		55AC7EBE1DAFC79300755D56 /* RxInfinityScrollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC7EBD1DAFC79300755D56 /* RxInfinityScrollUITests.swift */; };
 		55AC7ECE1DAFD01A00755D56 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC7ECD1DAFD01A00755D56 /* MenuView.swift */; };
 		55AC7ED01DAFD02300755D56 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55AC7ECF1DAFD02300755D56 /* MenuView.xib */; };
+		55AC7ED21DAFD4C900755D56 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC7ED11DAFD4C900755D56 /* ViewHelper.swift */; };
+		55AC7ED61DAFD5E100755D56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC7ED51DAFD5E100755D56 /* MainViewController.swift */; };
+		55AC7ED81DAFD5EC00755D56 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC7ED71DAFD5EC00755D56 /* TabViewController.swift */; };
 		70A4CC9811B2102D688AB674 /* Pods_RxInfinityScrollTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386D3EA4E4A050E44F20CC9B /* Pods_RxInfinityScrollTests.framework */; };
 		C0B4E8D1D623C1E475EDC6BE /* Pods_RxInfinityScrollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59E3FF58E7BA87C5926FD1C /* Pods_RxInfinityScrollUITests.framework */; };
 		EA7E989D37C792EB387CE369 /* Pods_RxInfinityScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFDFB669A2DC2FAC9C8262A7 /* Pods_RxInfinityScroll.framework */; };
@@ -59,6 +62,9 @@
 		55AC7EBF1DAFC79300755D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55AC7ECD1DAFD01A00755D56 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		55AC7ECF1DAFD02300755D56 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		55AC7ED11DAFD4C900755D56 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		55AC7ED51DAFD5E100755D56 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55AC7ED71DAFD5EC00755D56 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		5815EB5E4881D886EB9C61FA /* Pods-RxInfinityScroll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxInfinityScroll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxInfinityScroll/Pods-RxInfinityScroll.debug.xcconfig"; sourceTree = "<group>"; };
 		B590AFD9F08439E2220BF39B /* Pods-RxInfinityScrollTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxInfinityScrollTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxInfinityScrollTests/Pods-RxInfinityScrollTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B591D5525F376B7EC1496536 /* Pods-RxInfinityScrollUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxInfinityScrollUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxInfinityScrollUITests/Pods-RxInfinityScrollUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,10 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				55AC7E9A1DAFC79300755D56 /* AppDelegate.swift */,
+				55AC7ED11DAFD4C900755D56 /* ViewHelper.swift */,
 				55AC7E9C1DAFC79300755D56 /* ViewController.swift */,
+				55AC7ED41DAFD5C400755D56 /* MainPaging */,
+				55AC7ED31DAFD5BC00755D56 /* Tab */,
 				55AC7E9E1DAFC79300755D56 /* Main.storyboard */,
-				55AC7ECD1DAFD01A00755D56 /* MenuView.swift */,
-				55AC7ECF1DAFD02300755D56 /* MenuView.xib */,
 				55AC7EA41DAFC79300755D56 /* Assets.xcassets */,
 				55AC7EA61DAFC79300755D56 /* LaunchScreen.storyboard */,
 				55AC7EA91DAFC79300755D56 /* Info.plist */,
@@ -159,6 +166,24 @@
 				55AC7EBF1DAFC79300755D56 /* Info.plist */,
 			);
 			path = RxInfinityScrollUITests;
+			sourceTree = "<group>";
+		};
+		55AC7ED31DAFD5BC00755D56 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				55AC7ED71DAFD5EC00755D56 /* TabViewController.swift */,
+				55AC7ECD1DAFD01A00755D56 /* MenuView.swift */,
+				55AC7ECF1DAFD02300755D56 /* MenuView.xib */,
+			);
+			name = Tab;
+			sourceTree = "<group>";
+		};
+		55AC7ED41DAFD5C400755D56 /* MainPaging */ = {
+			isa = PBXGroup;
+			children = (
+				55AC7ED51DAFD5E100755D56 /* MainViewController.swift */,
+			);
+			name = MainPaging;
 			sourceTree = "<group>";
 		};
 		A5326833A447B4FE009C444C /* Pods */ = {
@@ -459,9 +484,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AC7ED21DAFD4C900755D56 /* ViewHelper.swift in Sources */,
 				55AC7E9D1DAFC79300755D56 /* ViewController.swift in Sources */,
 				55AC7ECE1DAFD01A00755D56 /* MenuView.swift in Sources */,
+				55AC7ED61DAFD5E100755D56 /* MainViewController.swift in Sources */,
 				55AC7E9B1DAFC79300755D56 /* AppDelegate.swift in Sources */,
+				55AC7ED81DAFD5EC00755D56 /* TabViewController.swift in Sources */,
 				55AC7EA31DAFC79300755D56 /* RxInfinityScroll.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

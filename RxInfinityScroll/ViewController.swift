@@ -9,27 +9,49 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var tabContainer: UIView!
 
+    let child1 = TabViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
+        
+        setupVC()
+        
+/*
         let view = UIView(frame: CGRect(x: 100, y: 100, width: 30, height: 30))
         
         view.backgroundColor = .red
         self.view.addSubview(view)
         
-        self.animation(view: view)
-
+    //    self.animation(view: view)
+*/
+    }
+    func setupVC(){
+        
+        
+        ViewHelper.sharedInstance.addChildContainer(targetView: tabContainer, parentVC: self, childVC: child1)
+    
     }
     
+  
+    @IBAction func action(_ sender: UIButton) {
+        animation(view:child1.tabView)
+        
+    }
+    
+    
+    
     func animation(view : UIView){
-        UIView.animate(withDuration: 2.0, animations: {
+        UIView.animate(withDuration: 0.01, animations: {
             var frame = view.frame
-            frame.origin.x += 100
+            frame.origin.x += 500
             view.frame = frame
             
             }, completion: { _ in
-                self.returnView(view: view)
+//                self.returnView(view: view)
         })
 
     }
