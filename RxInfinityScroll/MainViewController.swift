@@ -12,11 +12,11 @@ class MainViewController: UIPageViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = self
-        self.setViewControllers([getFirstVC()], direction: .forward, animated: true, completion: nil)
-        
-
+        configurePageVC()
+        configureScrollView()
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,6 +33,32 @@ class MainViewController: UIPageViewController{
     }
 
 }
+// MARK: - Private Method
+fileprivate extension MainViewController {
+    func configureScrollView(){
+        self.view.subviews.forEach({ view in
+            guard let scrollView = view as? UIScrollView else {
+                return
+            }
+            scrollView.delegate = self
+        })
+
+    }
+    func configurePageVC() {
+        self.dataSource = self
+        self.setViewControllers([getFirstVC()], direction: .forward, animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: - UIScrollViewDelegate
+extension MainViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
+    
+}
+// MARK: - UIPageViewControllerDataSource
 extension MainViewController : UIPageViewControllerDataSource{
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
