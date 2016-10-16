@@ -19,3 +19,10 @@ class MenuView: UIView {
     */
 
 }
+internal extension MenuView {
+    static func instantiate() -> MenuView{
+        return UINib(nibName: "MenuView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! MenuView
+    }
+    
+    
+}

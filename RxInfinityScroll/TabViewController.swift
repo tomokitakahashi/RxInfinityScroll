@@ -25,7 +25,7 @@ class TabViewController: UIViewController {
         
         self.view.addSubview(view)
         
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: 0.01, animations: {
             var frame = self.tabView.frame
             frame.origin.x -= 500
             self.tabView.frame = frame

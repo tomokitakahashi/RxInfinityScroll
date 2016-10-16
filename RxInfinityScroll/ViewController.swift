@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        setUpTab()
         
-        
-        setupVC()
+    
         
 /*
         let view = UIView(frame: CGRect(x: 100, y: 100, width: 30, height: 30))
@@ -29,18 +29,16 @@ class ViewController: UIViewController {
     //    self.animation(view: view)
 */
     }
-    func setupVC(){
-        
-        
-        ViewHelper.sharedInstance.addChildContainer(targetView: tabContainer, parentVC: self, childVC: child1)
     
+    func setUpTab(){
+        let tabView : MenuView = MenuView.instantiate()
+        tabView.frame = self.tabContainer.bounds
+        tabView.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+        self.tabContainer.addSubview(tabView)
     }
     
   
-    @IBAction func action(_ sender: UIButton) {
-        animation(view:child1.tabView)
-        
-    }
+ 
     
     
     
