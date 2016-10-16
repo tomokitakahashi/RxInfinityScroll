@@ -54,7 +54,7 @@ fileprivate extension MainViewController {
 // MARK: - UIScrollViewDelegate
 extension MainViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+        print(scrollView.contentOffset.x)
     }
     
 }
